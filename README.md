@@ -3,55 +3,82 @@
 ![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)
 ![License](https://img.shields.io/badge/License-MIT-green.svg)
 
-A command-line chat application using TCP sockets with private messaging and multi-channel support.
+A command-line chat application built with Python's built-in socket and threading modules, featuring multi-channel support and private messaging.
 
-## Features
+## 🌟 Features
 
 - 🆔 Unique nickname identification
 - 🌐 Multi-channel communication
-- 🔒 Private messaging (`/pm` command)
-- 🧵 Threaded server handles multiple clients
-- 📨 Real-time message broadcasting
-- ✨ Simple CLI interface
+- 🔒 Private messaging between users (`/pm` command)
+- 🧵 Threaded server handles multiple clients concurrently
+- 📨 Real-time message broadcasting within channels
+- 🚪 Graceful connection handling and disconnection
+- 💻 Simple and intuitive command-line interface
 
-## Requirements
+## 🚀 Getting Started
 
-- Python 3.8+
-- No external dependencies
+### Prerequisites
+- Python 3.8 or higher
+- No external dependencies required
 
-## Installation
+### Installation
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/chat-system.git
-cd chat-system
+git clone https://github.com/yourusername/TCP-Based-Multi-User-Chat-System.git
+cd TCP-Based-Multi-User-Chat-System
+```
 
-** AI declaration ** 
-Tools Used: ChatGPT (GPT-4) was employed to:
+## 🛠️ Usage
 
-Brainstorm the project structure and README layout.
+### Starting the Server
+1. Run the server on your machine:
+```bash
+python3 server.py
+```
+   - The server will start on `0.0.0.0:5555` by default
+   - To change the port, modify the `PORT` constant in `server.py`
 
-Debug and identify errors in socket communication and threading.
+### Connecting Clients
+1. Run the client on any machine in the network:
+```bash
+python3 client.py
+```
+2. When prompted, enter the server's IP address
+3. Choose a unique nickname when asked
+4. Enter the channel you want to join
 
-Optimize code for better scalability and failure handling.
+### Available Commands
+- Type any message to broadcast to your current channel
+- `/pm <nickname> <message>` - Send a private message to a specific user
+- `/quit` - Disconnect from the server
 
-Human Oversight: All AI-generated solutions were:
+## 📂 Project Structure
 
-Manually verified for correctness
+- `server.py` - Handles client connections and message routing
+- `client.py` - Client-side interface for connecting to the chat server
+- `README.md` - This documentation file
 
-Adapted to fit project requirements
+## 📝 Notes
+- The server supports multiple channels that users can join
+- Users in different channels won't see each other's messages
+- Private messages are end-to-end between the sender and recipient
+- The server handles client disconnections gracefully
 
-Tested rigorously in local environments
+## 🤝 Contributing
 
-Ethical Compliance:
+Contributions are welcome! Please feel free to submit a Pull Request.
 
-Final code implementation reflects original work
+## 📄 License
 
-AI was used as a supplemental tool only
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-Core logic and architecture were human-designed
+## ⚠️ AI Declaration
 
-Full Attribution:
-"This project benefited from AI-assisted brainstorming and debugging, 
-but all critical design decisions, code implementation, and testing were performed by the author."
+This project was developed with the assistance of AI tools for:
+- Brainstorming project structure and README layout
+- Debugging socket communication and threading issues
+- Code optimization and error handling
+
+**Important:** While AI was used as a tool, all critical design decisions, code implementation, and testing were performed by the author. The final implementation reflects original work with AI-assisted components.
 
