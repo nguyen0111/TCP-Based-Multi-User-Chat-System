@@ -73,12 +73,4 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## ⚠️ AI Declaration
-
-This project was developed with the assistance of AI tools for:
-- Brainstorming project structure and README layout
-- Debugging socket communication and threading issues
-- Code optimization and error handling
-
-**Important:** While AI was used as a tool, all critical design decisions, code implementation, and testing were performed by the author. The final implementation reflects original work with AI-assisted components.
 
